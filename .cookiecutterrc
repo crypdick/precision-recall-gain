@@ -5,14 +5,14 @@
 # automatically for any template). To use it:
 #
 #    pip install cookiepatcher
-#    cookiepatcher gh:ionelmc/cookiecutter-pylibrary python-precision-recall-gain
+#    cookiepatcher gh:ionelmc/cookiecutter-pylibrary precision-recall-gain
 #
 # See:
 #    https://pypi.org/project/cookiepatcher
 #
 # Alternatively, you can run:
 #
-#    cookiecutter --overwrite-if-exists --config-file=python-precision-recall-gain/.cookiecutterrc gh:ionelmc/cookiecutter-pylibrary
+#    cookiecutter --overwrite-if-exists --config-file=precision-recall-gain/.cookiecutterrc gh:ionelmc/cookiecutter-pylibrary
 
 default_context:
 
@@ -27,13 +27,13 @@ default_context:
     c_extension_test_pypi:     'no'
     c_extension_test_pypi_username: 'crypdick'
     codacy:                    'yes'
-    codacy_projectid:          '[Get ID from https://app.codacy.com/app/crypdick/python-precision-recall-gain/settings]'
+    codacy_projectid:          '[Get ID from https://app.codacy.com/app/crypdick/precision-recall-gain/settings]'
     codeclimate:               'yes'
     codecov:                   'yes'
     command_line_interface:    'click'
     command_line_interface_bin_name: 'precision-recall-gain'
     coveralls:                 'yes'
-    coveralls_token:           '[Required for Appveyor, take it from https://coveralls.io/github/crypdick/python-precision-recall-gain]'
+    coveralls_token:           '[Required for Appveyor, take it from https://coveralls.io/github/crypdick/precision-recall-gain]'
     distribution_name:         'precision-recall-gain'
     email:                     'public@richarddecal.com'
     full_name:                 'Richard Decal'
@@ -49,14 +49,14 @@ default_context:
     release_date:              'today'
     repo_hosting:              'github.com'
     repo_hosting_domain:       'github.com'
-    repo_name:                 'python-precision-recall-gain'
+    repo_name:                 'precision-recall-gain'
     repo_username:             'crypdick'
     requiresio:                'yes'
     scrutinizer:               'yes'
     setup_py_uses_setuptools_scm: 'no'
     setup_py_uses_test_runner: 'yes'
     sphinx_docs:               'yes'
-    sphinx_docs_hosting:       'https://python-precision-recall-gain.readthedocs.io/'
+    sphinx_docs_hosting:       'https://precision-recall-gain.readthedocs.io/'
     sphinx_doctest:            'yes'
     sphinx_theme:              'sphinx-rtd-theme'
     test_matrix_configurator:  'no'

@@ -16,36 +16,36 @@ Overview
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
-.. |docs| image:: https://readthedocs.org/projects/python-precision-recall-gain/badge/?style=flat
-    :target: https://python-precision-recall-gain.readthedocs.io/
+.. |docs| image:: https://readthedocs.org/projects/precision-recall-gain/badge/?style=flat
+    :target: https://precision-recall-gain.readthedocs.io/
     :alt: Documentation Status
 
-.. |travis| image:: https://api.travis-ci.com/crypdick/python-precision-recall-gain.svg?branch=master
+.. |travis| image:: https://api.travis-ci.com/crypdick/precision-recall-gain.svg?branch=master
     :alt: Travis-CI Build Status
-    :target: https://travis-ci.com/github/crypdick/python-precision-recall-gain
+    :target: https://travis-ci.com/github/crypdick/precision-recall-gain
 
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/crypdick/python-precision-recall-gain?branch=master&svg=true
+.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/crypdick/precision-recall-gain?branch=master&svg=true
     :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/crypdick/python-precision-recall-gain
+    :target: https://ci.appveyor.com/project/crypdick/precision-recall-gain
 
-.. |requires| image:: https://requires.io/github/crypdick/python-precision-recall-gain/requirements.svg?branch=master
+.. |requires| image:: https://requires.io/github/crypdick/precision-recall-gain/requirements.svg?branch=master
     :alt: Requirements Status
-    :target: https://requires.io/github/crypdick/python-precision-recall-gain/requirements/?branch=master
+    :target: https://requires.io/github/crypdick/precision-recall-gain/requirements/?branch=master
 
-.. |coveralls| image:: https://coveralls.io/repos/crypdick/python-precision-recall-gain/badge.svg?branch=master&service=github
+.. |coveralls| image:: https://coveralls.io/repos/crypdick/precision-recall-gain/badge.svg?branch=master&service=github
     :alt: Coverage Status
-    :target: https://coveralls.io/r/crypdick/python-precision-recall-gain
+    :target: https://coveralls.io/r/crypdick/precision-recall-gain
 
-.. |codecov| image:: https://codecov.io/gh/crypdick/python-precision-recall-gain/branch/master/graphs/badge.svg?branch=master
+.. |codecov| image:: https://codecov.io/gh/crypdick/precision-recall-gain/branch/master/graphs/badge.svg?branch=master
     :alt: Coverage Status
-    :target: https://codecov.io/github/crypdick/python-precision-recall-gain
+    :target: https://codecov.io/github/crypdick/precision-recall-gain
 
-.. |codacy| image:: https://img.shields.io/codacy/grade/[Get ID from https://app.codacy.com/app/crypdick/python-precision-recall-gain/settings].svg
-    :target: https://www.codacy.com/app/crypdick/python-precision-recall-gain
+.. |codacy| image:: https://img.shields.io/codacy/grade/[Get ID from https://app.codacy.com/app/crypdick/precision-recall-gain/settings].svg
+    :target: https://www.codacy.com/app/crypdick/precision-recall-gain
     :alt: Codacy Code Quality Status
 
-.. |codeclimate| image:: https://codeclimate.com/github/crypdick/python-precision-recall-gain/badges/gpa.svg
-   :target: https://codeclimate.com/github/crypdick/python-precision-recall-gain
+.. |codeclimate| image:: https://codeclimate.com/github/crypdick/precision-recall-gain/badges/gpa.svg
+   :target: https://codeclimate.com/github/crypdick/precision-recall-gain
    :alt: CodeClimate Quality Status
 
 .. |version| image:: https://img.shields.io/pypi/v/precision-recall-gain.svg
@@ -64,14 +64,14 @@ Overview
     :alt: Supported implementations
     :target: https://pypi.org/project/precision-recall-gain
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/crypdick/python-precision-recall-gain/v0.0.0.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/crypdick/precision-recall-gain/v0.0.0.svg
     :alt: Commits since latest release
-    :target: https://github.com/crypdick/python-precision-recall-gain/compare/v0.0.0...master
+    :target: https://github.com/crypdick/precision-recall-gain/compare/v0.0.0...master
 
 
-.. |scrutinizer| image:: https://img.shields.io/scrutinizer/quality/g/crypdick/python-precision-recall-gain/master.svg
+.. |scrutinizer| image:: https://img.shields.io/scrutinizer/quality/g/crypdick/precision-recall-gain/master.svg
     :alt: Scrutinizer Status
-    :target: https://scrutinizer-ci.com/g/crypdick/python-precision-recall-gain/
+    :target: https://scrutinizer-ci.com/g/crypdick/precision-recall-gain/
 
 
 .. end-badges
@@ -89,14 +89,14 @@ Installation
 
 You can also install the in-development version with::
 
-    pip install https://github.com/crypdick/python-precision-recall-gain/archive/master.zip
+    pip install https://github.com/crypdick/precision-recall-gain/archive/master.zip
 
 
 Documentation
 =============
 
 
-https://python-precision-recall-gain.readthedocs.io/
+https://precision-recall-gain.readthedocs.io/
 
 
 Development

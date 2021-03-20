@@ -8,7 +8,7 @@ little bit helps, and credit will always be given.
 Bug reports
 ===========
 
-When `reporting a bug <https://github.com/crypdick/python-precision-recall-gain/issues>`_ please include:
+When `reporting a bug <https://github.com/crypdick/precision-recall-gain/issues>`_ please include:
 
     * Your operating system name and version.
     * Any details about your local setup that might be helpful in troubleshooting.
@@ -24,7 +24,7 @@ articles, and such.
 Feature requests and feedback
 =============================
 
-The best way to send feedback is to file an issue at https://github.com/crypdick/python-precision-recall-gain/issues.
+The best way to send feedback is to file an issue at https://github.com/crypdick/precision-recall-gain/issues.
 
 If you are proposing a feature:
 
@@ -35,13 +35,13 @@ If you are proposing a feature:
 Development
 ===========
 
-To set up `python-precision-recall-gain` for local development:
+To set up `precision-recall-gain` for local development:
 
-1. Fork `python-precision-recall-gain <https://github.com/crypdick/python-precision-recall-gain>`_
+1. Fork `precision-recall-gain <https://github.com/crypdick/precision-recall-gain>`_
    (look for the "Fork" button).
 2. Clone your fork locally::
 
-    git clone git@github.com:YOURGITHUBNAME/python-precision-recall-gain.git
+    git clone git@github.com:YOURGITHUBNAME/precision-recall-gain.git
 
 3. Create a branch for local development::
 
@@ -74,7 +74,7 @@ For merging, you should:
 4. Add yourself to ``AUTHORS.rst``.
 
 .. [1] If you don't have all the necessary python versions available locally you can rely on Travis - it will
-       `run the tests <https://travis-ci.com/github/crypdick/python-precision-recall-gain/pull_requests>`_
+       `run the tests <https://travis-ci.com/github/crypdick/precision-recall-gain/pull_requests>`_
        for each change you add in the pull request.
 
        It will be slower though ...

@@ -32,7 +32,7 @@ setup(
     ),
     author='Richard Decal',
     author_email='public@richarddecal.com',
-    url='https://github.com/crypdick/python-precision-recall-gain',
+    url='https://github.com/crypdick/precision-recall-gain',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],
@@ -62,8 +62,8 @@ setup(
         'Topic :: Utilities',
     ],
     project_urls={
-        'Documentation': 'https://python-precision-recall-gain.readthedocs.io/',
-        'Changelog': 'https://python-precision-recall-gain.readthedocs.io/en/latest/changelog.html',
+        'Documentation': 'https://precision-recall-gain.readthedocs.io/',
+        'Changelog': 'https://precision-recall-gain.readthedocs.io/en/latest/changelog.html',
         'Issue Tracker': 'https://github.com/crypdick/precision-recall-gain/issues',
     },
     keywords=[
