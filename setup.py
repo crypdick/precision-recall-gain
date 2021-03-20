@@ -23,7 +23,7 @@ def read(*names, **kwargs):
 
 setup(
     name='precision-recall-gain',
-    version='0.0.0',
+    version='0.0.1',
     license='MIT',
     description='Precision-recall-gain curves for Python',
     long_description='%s\n%s' % (
