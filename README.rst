@@ -12,7 +12,7 @@ Overview
     * - tests
       - | |travis| |appveyor| |requires|
         | |coveralls| |codecov|
-        | |scrutinizer| |codacy| |codeclimate|
+        | |scrutinizer|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
@@ -39,14 +39,6 @@ Overview
 .. |codecov| image:: https://codecov.io/gh/crypdick/precision-recall-gain/branch/master/graphs/badge.svg?branch=master
     :alt: Coverage Status
     :target: https://codecov.io/github/crypdick/precision-recall-gain
-
-.. |codacy| image:: https://img.shields.io/codacy/grade/[Get ID from https://app.codacy.com/app/crypdick/precision-recall-gain/settings].svg
-    :target: https://www.codacy.com/app/crypdick/precision-recall-gain
-    :alt: Codacy Code Quality Status
-
-.. |codeclimate| image:: https://codeclimate.com/github/crypdick/precision-recall-gain/badges/gpa.svg
-   :target: https://codeclimate.com/github/crypdick/precision-recall-gain
-   :alt: CodeClimate Quality Status
 
 .. |version| image:: https://img.shields.io/pypi/v/precision-recall-gain.svg
     :alt: PyPI Package latest release
