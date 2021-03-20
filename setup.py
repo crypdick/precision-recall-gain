@@ -64,7 +64,7 @@ setup(
     project_urls={
         'Documentation': 'https://python-precision-recall-gain.readthedocs.io/',
         'Changelog': 'https://python-precision-recall-gain.readthedocs.io/en/latest/changelog.html',
-        'Issue Tracker': 'https://github.com/crypdick/python-precision-recall-gain/issues',
+        'Issue Tracker': 'https://github.com/crypdick/precision-recall-gain/issues',
     },
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
