@@ -1,4 +1,4 @@
-from ._classification import (
+from precision_recall_gain._classification import (
     f1_gain_score,
     fbeta_gain_score,
     precision_gain_score,
