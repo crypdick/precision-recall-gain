@@ -21,7 +21,7 @@ copyright = f"{year}, {author}"
 try:
     from pkg_resources import get_distribution
 
-    version = release = get_distribution("nameless").version
+    version = release = get_distribution("precision_recall_gain").version
 except Exception:
     traceback.print_exc()
     version = release = "1.0.0"

@@ -31,7 +31,6 @@ default_context:
     codeclimate:               'no'
     codecov:                   'yes'
     command_line_interface:    'no'
-    command_line_interface_bin_name: 'nameless'
     coveralls:                 'yes'
     coveralls_token:           '[n3iizHuu5zxvJUcBoT5n92ur2MY13bo03]'
     distribution_name:         'precision-recall-gain'
