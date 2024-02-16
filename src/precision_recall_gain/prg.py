@@ -1,11 +1,9 @@
 from functools import partial
 
 import numpy as np
-
-from sklearn.metrics import precision_recall_curve
+from sklearn.metrics._base import _average_binary_score
 from sklearn.metrics._ranking import _binary_clf_curve
 from sklearn.utils.multiclass import type_of_target
-from sklearn.metrics._base import _average_binary_score
 
 
 def area_under_precision_recall_gain_score(
