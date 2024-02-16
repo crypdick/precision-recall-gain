@@ -66,7 +66,7 @@ def main():
     tox_environments = [line for line in tox_environments if line.startswith("py")]
     for template in templates_path.rglob("*"):
         if template.is_file():
-            template_path = template.relative_to(templates_path).as_posix()
+            template_path = str(template.relative_to(templates_path))
             destination = base_path / template_path
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_text(
