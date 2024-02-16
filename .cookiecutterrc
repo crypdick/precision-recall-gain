@@ -39,7 +39,7 @@ default_context:
     full_name:                 'Richard Decal'
     legacy_python:             'no'
     license:                   'MIT license'
-    linter:                    'flake8'
+    linter:                    'cython-lint'
     package_name:              'precision_recall_gain'
     pre_commit:                'yes'
     project_name:              'precision-recall-gain'

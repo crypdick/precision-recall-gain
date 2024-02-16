@@ -1,0 +1,47 @@
+# rules set to match sklearn
+
+[tool.black]
+line-length = 88
+target_version = ['py39', 'py310', 'py311']
+preview = true
+
+[tool.ruff]
+# all rules can be found here: https://beta.ruff.rs/docs/rules/
+select = ["E", "F", "W", "I"]
+extend-include = ["*.ipynb"]
+
+# max line length for black
+line-length = 88
+target-version = "py38"
+
+ignore=[
+    # space before : (needed for how black formats slicing)
+    "E203",
+    # do not assign a lambda expression, use a def
+    "E731",
+    # do not use variables named 'l', 'O', or 'I'
+    "E741",
+]
+
+
+
+[tool.cython-lint]
+# Ignore the same error codes as ruff
+# + E501 (line too long) because keeping it < 88 in cython
+# often makes code less readable.
+ignore = [
+    # multiple spaces/tab after comma
+    'E24',
+    # space before : (needed for how black formats slicing)
+    'E203',
+    # line too long
+    'E501',
+    # do not assign a lambda expression, use a def
+    'E731',
+    # do not use variables named 'l', 'O', or 'I'
+    'E741',
+    # line break before binary operator
+    'W503',
+    # line break after binary operator
+    'W504',
+]
