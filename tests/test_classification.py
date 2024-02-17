@@ -1,6 +1,7 @@
 import numpy as np
 import pytest
 from sklearn import datasets, svm
+from sklearn.exceptions import UndefinedMetricWarning
 from sklearn.utils._testing import (
     assert_almost_equal,
     assert_array_almost_equal,
@@ -282,3 +283,68 @@ def test_precision_recall_f1_gain_score_multiclass():
     assert_array_almost_equal(r, [0.88, 0.96, -5.58], 2)
     assert_array_almost_equal(f, [0.89, 0.73, -2.99], 2)
     assert_array_equal(s, [24, 20, 31])
+
+
+def test_precision_gain_score_docs():
+    y_true = [0, 1, 2, 0, 1, 2]
+    y_pred = [0, 2, 1, 0, 0, 1]
+    assert precision_gain_score(y_true, y_pred, average="macro") < -1e14
+    assert precision_gain_score(y_true, y_pred, average="weighted") < -1e14
+
+    result = precision_gain_score(y_true, y_pred, average=None)
+    assert np.isclose(result[0], 0.75)
+    assert np.all(result[1:] < -1e14)
+
+    y_pred = [0, 0, 0, 0, 0, 0]
+    with pytest.warns(UndefinedMetricWarning):
+        result = precision_gain_score(y_true, y_pred, average=None)
+    assert np.isclose(result[0], 0)
+    assert np.all(result[1:] < -1e14)
+
+    assert_array_almost_equal(
+        precision_gain_score(y_true, y_pred, average=None, zero_division=1),
+        [0.0, 1.0, 1.0],
+        2,
+    )
+
+    # multilabel classification
+    y_true = [[0, 0, 0], [1, 1, 1], [0, 1, 1]]
+    y_pred = [[0, 0, 0], [1, 1, 1], [1, 1, 0]]
+    # this one is correct
+    assert_array_almost_equal(
+        precision_gain_score(y_true, y_pred, average=None), [0.5, 1.0, 1.0], 2
+    )
+    assert_array_almost_equal(
+        recall_gain_score(y_true, y_pred, average=None), [1.0, 1.0, -1.0], 2
+    )
+
+    # binary classification
+    y_pred = [0, 0, 1, 0]
+    y_true = [0, 1, 1, 0]
+    result = precision_recall_fgain_score_support(y_true, y_pred, average="binary")
+    assert_almost_equal(result[:3], [1, 0, 0.5])
+    assert result[3] is None
+
+
+def test_recall_gain_docs():
+    y_true = [0, 1, 2, 0, 1, 2]
+    y_pred = [0, 2, 1, 0, 0, 1]
+
+    assert recall_gain_score(y_true, y_pred, average="macro") < -1e14
+    assert recall_gain_score(y_true, y_pred, average="weighted") < -1e14
+    result = recall_gain_score(y_true, y_pred, average=None)
+    assert np.isclose(result[0], 1)
+    assert np.all(result[1:] < -1e14)
+
+    y_true = [0, 0, 0, 0, 0, 0]
+
+    with pytest.warns((UndefinedMetricWarning, RuntimeWarning)):
+        result = recall_gain_score(y_true, y_pred, average=None)
+    assert_array_almost_equal(result, [-np.inf, np.nan, np.nan], 2)
+
+    with pytest.warns(RuntimeWarning):
+        assert_array_almost_equal(
+            recall_gain_score(y_true, y_pred, average=None, zero_division=1),
+            [-np.inf, 1.0, 1.0],
+            2,
+        )
