@@ -28,14 +28,6 @@ jobs:
             cibw_arch: 'x86_64'
             cibw_build: false
             os: 'ubuntu-latest'
-          - name: 'py311-nocov (ubuntu/x86_64/manylinux)'
-            python: '3.11'
-            toxpython: 'python3.11'
-            python_arch: 'x64'
-            tox_env: 'py311-nocov'
-            cibw_arch: 'x86_64'
-            cibw_build: 'cp311-*manylinux*'
-            os: 'ubuntu-latest'
     steps:
     - uses: docker/setup-qemu-action@v2
       if: matrix.cibw_arch == 'aarch64'
