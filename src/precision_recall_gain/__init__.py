@@ -7,7 +7,7 @@ from precision_recall_gain._classification import (
 )
 
 # ensure this matches setup.py
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "f1_gain_score",

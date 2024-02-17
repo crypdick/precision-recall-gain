@@ -81,7 +81,7 @@ setup(
     # use_scm_version={
     #     "local_scheme": "dirty-tag",
     #     "write_to": "src/precision-recall-gain/_version.py",
-    #     "fallback_version": "0.1.0",
+    #     "fallback_version": "0.1.1",
     # },
     long_description="{}\n{}".format(
         re.compile("^.. start-badges.*^.. end-badges", re.M | re.S).sub(
