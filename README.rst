@@ -10,9 +10,9 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |appveyor| |requires|
+      - | |github-actions|
         | |coveralls| |codecov|
-        | |scrutinizer|
+        | |scrutinizer| |codeclimate|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
@@ -20,25 +20,21 @@ Overview
     :target: https://precision-recall-gain.readthedocs.io/
     :alt: Documentation Status
 
-.. |travis| image:: https://api.travis-ci.com/crypdick/precision-recall-gain.svg?branch=master
-    :alt: Travis-CI Build Status
-    :target: https://travis-ci.com/github/crypdick/precision-recall-gain
+.. |github-actions| image:: https://github.com/crypdick/precision-recall-gain/actions/workflows/github-actions.yml/badge.svg
+    :alt: GitHub Actions Build Status
+    :target: https://github.com/crypdick/precision-recall-gain/actions
 
-.. |appveyor| image:: https://ci.appveyor.com/api/projects/status/github/crypdick/precision-recall-gain?branch=master&svg=true
-    :alt: AppVeyor Build Status
-    :target: https://ci.appveyor.com/project/crypdick/precision-recall-gain
-
-.. |requires| image:: https://requires.io/github/crypdick/precision-recall-gain/requirements.svg?branch=master
-    :alt: Requirements Status
-    :target: https://requires.io/github/crypdick/precision-recall-gain/requirements/?branch=master
-
-.. |coveralls| image:: https://coveralls.io/repos/crypdick/precision-recall-gain/badge.svg?branch=master&service=github
+.. |coveralls| image:: https://coveralls.io/repos/github/crypdick/precision-recall-gain/badge.svg?branch=master
     :alt: Coverage Status
-    :target: https://coveralls.io/r/crypdick/precision-recall-gain
+    :target: https://coveralls.io/github/crypdick/precision-recall-gain?branch=master
 
 .. |codecov| image:: https://codecov.io/gh/crypdick/precision-recall-gain/branch/master/graphs/badge.svg?branch=master
     :alt: Coverage Status
-    :target: https://codecov.io/github/crypdick/precision-recall-gain
+    :target: https://app.codecov.io/github/crypdick/precision-recall-gain
+
+.. |codeclimate| image:: https://codeclimate.com/github/crypdick/precision-recall-gain/badges/gpa.svg
+   :target: https://codeclimate.com/github/crypdick/precision-recall-gain
+   :alt: CodeClimate Quality Status
 
 .. |version| image:: https://img.shields.io/pypi/v/precision-recall-gain.svg
     :alt: PyPI Package latest release
