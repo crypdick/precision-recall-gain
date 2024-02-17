@@ -12,7 +12,7 @@ Overview
     * - tests
       - | |github-actions|
         | |coveralls| |codecov|
-        | |scrutinizer| |codeclimate|
+        | |scrutinizer|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
         | |commits-since|
