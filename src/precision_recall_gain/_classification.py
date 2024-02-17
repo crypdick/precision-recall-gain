@@ -2,6 +2,7 @@
 https://github.com/scikit-learn/scikit-learn/pull/24121
 """
 
+# ruff: noqa: E501
 import numpy as np
 from sklearn.metrics._classification import (
     _check_set_wise_labels,
@@ -430,7 +431,7 @@ def f1_gain_score(
 
     Examples
     --------
-    >>> from sklearn.metrics import f1_gain_score
+    >>> from precision_recall_gain import f1_gain_score
     >>> y_true = [0, 1, 2, 0, 1, 2, 2]
     >>> y_pred = [0, 2, 1, 0, 1, 1, 2]
     >>> f1_gain_score(y_true, y_pred, average='macro')
@@ -580,7 +581,7 @@ def fbeta_gain_score(
 
     Examples
     --------
-    >>> from sklearn.metrics import fbeta_gain_score
+    >>> from precision_recall_gain import fbeta_gain_score
     >>> y_true = [0, 1, 2, 0, 1, 2, 2]
     >>> y_pred = [0, 2, 1, 0, 1, 1, 2]
     >>> fbeta_gain_score(y_true, y_pred, average='macro', beta=0.5)
@@ -764,23 +765,16 @@ def precision_recall_fgain_score_support(
     Examples
     --------
     >>> import numpy as np
-    >>> from sklearn.metrics import precision_recall_fgain_score_support
+    >>> from precision_recall_gain import precision_recall_fgain_score_support
     >>> y_true = np.array(['cat', 'dog', 'pig', 'dog', 'cat', 'pig', 'pig'])
     >>> y_pred = np.array(['cat', 'pig', 'dog', 'dog', 'cat', 'dog', 'pig'])
-    >>> precision_recall_fgain_score_support(y_true, y_pred, average='macro')
-    (0.48..., 0.36..., 0.42..., None)
-    >>> precision_recall_fgain_score_support(y_true, y_pred, average='weighted')
-    (0.45..., 0.24..., 0.34..., None)
 
     It is possible to compute per-label precisions, recalls, F1-scores and
     supports instead of averaging:
 
     >>> precision_recall_fgain_score_support(y_true, y_pred, average=None,
     ... labels=['pig', 'dog', 'cat'])
-    (array([0.25, 0.2 , 1.  ]),
-     array([-0.5,  0.6,  1. ]),
-     array([-0.125,  0.4  ,  1.   ]),
-     array([3, 2, 2]))
+    (array([0.25, 0.2 , 1.  ]), array([-0.5,  0.6,  1. ]), array([-0.125,  0.4  ,  1.   ]), array([3, 2, 2]))
     """
     average_options = (None, "binary", "macro", "weighted")
     if average not in average_options:
@@ -918,24 +912,24 @@ def precision_gain_score(
 
     Examples
     --------
-    >>> from sklearn.metrics import precision_score
+    >>> from precision_recall_gain import precision_gain_score
     >>> y_true = [0, 1, 2, 0, 1, 2]
     >>> y_pred = [0, 2, 1, 0, 0, 1]
-    >>> precision_score(y_true, y_pred, average='macro')
-    0.22...
-    >>> precision_score(y_true, y_pred, average='weighted')
-    0.22...
-    >>> precision_score(y_true, y_pred, average=None)
-    array([0.66..., 0.        , 0.        ])
+    >>> int(precision_gain_score(y_true, y_pred, average='macro'))
+    -333333333333333
+    >>> int(precision_gain_score(y_true, y_pred, average='weighted'))
+    -333333333333333
+    >>> precision_gain_score(y_true, y_pred, average=None)
+    array([ 7.5e-01, -5.0e+14, -5.0e+14])
     >>> y_pred = [0, 0, 0, 0, 0, 0]
-    >>> precision_score(y_true, y_pred, average=None)
-    array([0.33..., 0.        , 0.        ])
-    >>> precision_score(y_true, y_pred, average=None, zero_division=1)
-    array([0.33..., 1.        , 1.        ])
+    >>> precision_gain_score(y_true, y_pred, average=None)
+    array([ 0.e+00, -5.e+14, -5.e+14])
+    >>> precision_gain_score(y_true, y_pred, average=None, zero_division=1)
+    array([0., 1., 1.])
     >>> # multilabel classification
     >>> y_true = [[0, 0, 0], [1, 1, 1], [0, 1, 1]]
     >>> y_pred = [[0, 0, 0], [1, 1, 1], [1, 1, 0]]
-    >>> precision_score(y_true, y_pred, average=None)
+    >>> precision_gain_score(y_true, y_pred, average=None)
     array([0.5, 1. , 1. ])
     """
     p, _, _, _ = precision_recall_fgain_score_support(
@@ -1071,25 +1065,25 @@ def recall_gain_score(
 
     Examples
     --------
-    >>> from sklearn.metrics import recall_score
+    >>> from precision_recall_gain import recall_gain_score
     >>> y_true = [0, 1, 2, 0, 1, 2]
     >>> y_pred = [0, 2, 1, 0, 0, 1]
-    >>> recall_score(y_true, y_pred, average='macro')
-    0.33...
-    >>> recall_score(y_true, y_pred, average='weighted')
-    0.33...
-    >>> recall_score(y_true, y_pred, average=None)
-    array([1., 0., 0.])
+    >>> int(recall_gain_score(y_true, y_pred, average='macro'))
+    -333333333333333
+    >>> int(recall_gain_score(y_true, y_pred, average='weighted'))
+    -333333333333333
+    >>> recall_gain_score(y_true, y_pred, average=None)
+    array([ 1.e+00, -5.e+14, -5.e+14])
     >>> y_true = [0, 0, 0, 0, 0, 0]
-    >>> recall_score(y_true, y_pred, average=None)
-    array([0.5, 0. , 0. ])
-    >>> recall_score(y_true, y_pred, average=None, zero_division=1)
-    array([0.5, 1. , 1. ])
+    >>> recall_gain_score(y_true, y_pred, average=None)
+    array([-inf,  nan,  nan])
+    >>> recall_gain_score(y_true, y_pred, average=None, zero_division=1)
+    array([-inf,   1.,   1.])
     >>> # multilabel classification
     >>> y_true = [[0, 0, 0], [1, 1, 1], [0, 1, 1]]
     >>> y_pred = [[0, 0, 0], [1, 1, 1], [1, 1, 0]]
-    >>> recall_score(y_true, y_pred, average=None)
-    array([1. , 1. , 0.5])
+    >>> recall_gain_score(y_true, y_pred, average=None)
+    array([ 1.,  1., -1.])
     """
     _, r, _, _ = precision_recall_fgain_score_support(
         y_true,
@@ -1130,4 +1124,16 @@ def prg_gain_transform(x, *, pi):
     """
     if x == pi == 1:
         return 1
+    elif x == pi == 0:
+        # if no positive class in true or predicted labels, return NaN
+        return np.nan
+    # note: if x == 0, then the metric value is -Inf
+    # and if x<pi, then the metric value is negative
+    # for our purposes we will add a small value to x
+    # to avoid division by zero and so that the metric
+    # value is not nan if one of the classes have a precision
+    # or recall of 0
+    x = min(1, x + 1e-15)
+    # we have to also adjust pi for cases when pi is 0
+    pi = min(1, pi + 1e-15)
     return (x - pi) / ((1 - pi) * x)
