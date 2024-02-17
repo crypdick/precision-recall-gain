@@ -90,7 +90,7 @@ def area_under_precision_recall_gain_score(
     Examples
     --------
     >>> import numpy as np
-    >>> from sklearn.metrics import average_precision_score
+    >>> from precision_recall_gain import average_precision_score
     >>> y_true = np.array([0, 0, 1, 1])
     >>> y_scores = np.array([0.1, 0.4, 0.35, 0.8])
     >>> average_precision_score(y_true, y_scores)
@@ -221,7 +221,7 @@ def precision_recall_gain_curve(y_true, probas_pred, pos_label=1, sample_weight=
     Examples
     --------
     >>> import numpy as np
-    >>> from sklearn.metrics import precision_recall_curve
+    >>> from precision_recall_gain import precision_recall_curve
     >>> y_true = np.array([0, 0, 1, 1])
     >>> y_scores = np.array([0.1, 0.4, 0.35, 0.8])
     >>> precision, recall, thresholds = precision_recall_curve(
@@ -273,3 +273,67 @@ def precision_recall_gain_curve(y_true, probas_pred, pos_label=1, sample_weight=
     )
 
     return precision_gains, recall_gains
+
+
+"""
+Source:
+https://github.com/meeliskull/prg/blob/master/Python_package/prg/prg.py
+"""
+
+
+def precision(tp, fn, fp, tn):
+    with np.errstate(divide="ignore", invalid="ignore"):
+        return tp / (tp + fp)
+
+
+def recall(tp, fn, fp, tn):
+    with np.errstate(divide="ignore", invalid="ignore"):
+        return tp / (tp + fn)
+
+
+def precision_gain(tp, fn, fp, tn):
+    """Calculates Precision Gain from the contingency table
+
+    This function calculates Precision Gain from the entries of the contingency
+    table: number of true positives (TP), false negatives (FN), false positives
+    (FP), and true negatives (TN). More information on Precision-Recall-Gain
+    curves and how to cite this work is available at
+    http://www.cs.bris.ac.uk/~flach/PRGcurves/.
+    """
+    n_pos = tp + fn
+    n_neg = fp + tn
+    with np.errstate(divide="ignore", invalid="ignore"):
+        prec_gain = 1.0 - (n_pos / n_neg) * (fp / tp)
+    if np.alen(prec_gain) > 1:
+        prec_gain[tn + fn == 0] = 0
+    elif tn + fn == 0:
+        prec_gain = 0
+    return prec_gain
+
+
+def recall_gain(tp, fn, fp, tn):
+    """Calculates Recall Gain from the contingency table
+
+    This function calculates Recall Gain from the entries of the contingency
+    table: number of true positives (TP), false negatives (FN), false positives
+    (FP), and true negatives (TN). More information on Precision-Recall-Gain
+    curves and how to cite this work is available at
+    http://www.cs.bris.ac.uk/~flach/PRGcurves/.
+
+    Args:
+        tp (float) or ([float]): True Positives
+        fn (float) or ([float]): False Negatives
+        fp (float) or ([float]): False Positives
+        tn (float) or ([float]): True Negatives
+    Returns:
+        (float) or ([float])
+    """
+    n_pos = tp + fn
+    n_neg = fp + tn
+    with np.errstate(divide="ignore", invalid="ignore"):
+        rg = 1.0 - (n_pos / n_neg) * (fn / tp)
+    if np.alen(rg) > 1:
+        rg[tn + fn == 0] = 1
+    elif tn + fn == 0:
+        rg = 1
+    return rg
