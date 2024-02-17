@@ -77,7 +77,7 @@ setup(
     name="precision-recall-gain",
     license="MIT",
     description="Precision-recall-gain curves for Python",
-    version="0.1.2",
+    version="0.1.3",
     long_description="{}\n{}".format(
         re.compile("^.. start-badges.*^.. end-badges", re.M | re.S).sub(
             "", read("README.rst")
