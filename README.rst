@@ -32,10 +32,6 @@ Overview
     :alt: Coverage Status
     :target: https://app.codecov.io/github/crypdick/precision-recall-gain
 
-.. |codeclimate| image:: https://codeclimate.com/github/crypdick/precision-recall-gain/badges/gpa.svg
-   :target: https://codeclimate.com/github/crypdick/precision-recall-gain
-   :alt: CodeClimate Quality Status
-
 .. |version| image:: https://img.shields.io/pypi/v/precision-recall-gain.svg
     :alt: PyPI Package latest release
     :target: https://pypi.org/project/precision-recall-gain
@@ -115,6 +111,5 @@ References
 ===========
 * [Precision-Recall-Gain Curves: PR Analysis Done Right (2015) by Peter A. Flach and Meelis Kull](https://papers.nips.cc/paper/2015/file/33e8075e9970de0cfea955afd4644bb2-Paper.pdf)
 * [sklearn-compatible implementation](https://github.com/scikit-learn/scikit-learn/pull/24121) by [Bradley Fowler](https://github.com/bradleyfowler123)
-* [PRG curves](https://www.biostat.wisc.edu/~page/rocprg.pdf) by [David Page](https://www.biostat.wisc.edu/~page/)
 * [Blog post by Bradley Fowler](https://snorkel.ai/improving-upon-precision-recall-and-f1-with-gain-metrics/)
 * [Original implementation](https://github.com/meeliskull/prg) by [Meelis Kull](https://github.com/meeliskull)
