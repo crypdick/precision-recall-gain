@@ -116,9 +116,7 @@ setup(
         ),
         "Issue Tracker": "https://github.com/crypdick/precision-recall-gain/issues",
     },
-    keywords=[
-        # eg: "keyword1", "keyword2", "keyword3",
-    ],
+    keywords=["precision", "recall", "metrics", "machine learning", "classification"],
     python_requires=">=3.9",
     install_requires=["scikit-learn>=1.1"],
     extras_require={
