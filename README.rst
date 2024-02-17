@@ -52,9 +52,9 @@ Overview
     :alt: Supported implementations
     :target: https://pypi.org/project/precision-recall-gain
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/crypdick/precision-recall-gain/v0.1.1.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/crypdick/precision-recall-gain/v0.1.2.svg
     :alt: Commits since latest release
-    :target: https://github.com/crypdick/precision-recall-gain/compare/v0.1.1...master
+    :target: https://github.com/crypdick/precision-recall-gain/compare/v0.1.2...master
 
 
 .. |scrutinizer| image:: https://img.shields.io/scrutinizer/quality/g/crypdick/precision-recall-gain/master.svg
